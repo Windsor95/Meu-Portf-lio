@@ -2,7 +2,6 @@ main {
   .s-hero {
     width: 100%;
     height: 100vh;
-    padding-top: 10rem;
     .container {
       display: flex;
       align-items: center;
@@ -17,8 +16,8 @@ main {
         height: 100%;
         .img-pontos {
           position: absolute;
-          top: 10rem;
-          left: -2rem;
+          top: 15rem;
+          left: 2rem;
         }
         .img-x {
           margin-bottom: 2rem;
@@ -112,11 +111,365 @@ main {
         }
         .img-pontos2 {
           position: absolute;
-          bottom: -40rem;
+          bottom: -35rem;
           right: 3rem;
           transform: rotate(90deg);
         }
       }
     }
+
+    @include responsive(1200px) {
+    
+      .container {
+      
+        .box-left-hero {
+        
+          margin-top: 3rem;
+          .img-pontos {
+            width: 7%;
+            top: 7rem;
+            left: 1rem;
+          }
+          .img-x {
+            width: 30%;
+            margin-bottom: 1rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+            &:last-of-type {
+              font-size: 3.5rem;
+            }
+          }
+          h1 {
+            font-size: 4.2rem;
+          }
+          p {
+            width: 80%;
+            font-size: 1.5rem;
+          }
+          .box-btn {
+            width: 80%;
+            .btn-prymary {
+              margin-top: 2rem;
+              padding: 0.5rem 0.9rem;
+              a {
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+        .box-right-hero {
+          .img-hero {
+            width: 80%;
+            top: 6.4rem;
+            bottom: 0rem;
+            left: 0rem;
+            right: 8rem;
+          }
+          .img-x2 {
+            width: 30%;
+            top: 10rem;
+            bottom: 0rem;
+            right: 1rem;
+          }
+          .social-hero {
+            gap: 1.5rem;
+            top: 3rem;
+            bottom: 0rem;
+            right: 0rem;
+            a {
+                img {
+                  width: 2.5rem;
+                }
+            }
+          }
+          .img-pontos2 {
+            width: 7%;
+            bottom: -25rem;
+            right: 3rem;
+          }
+        }
+      }
+
+    }
+
+    @include responsive(820px) {
+    
+      .container {
+        display: flex;
+        flex-direction: column;
+
+        .box-left-hero {
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin-top: -42rem;
+          .img-pontos {
+            width: 7%;
+            position: absolute;
+            top: 35rem;
+            left: 0rem;
+          }
+          .img-x {
+            width: 20%;
+            margin-bottom: 1rem;
+          }
+          h2 {
+            font-size: 4.3rem;
+            &:last-of-type {
+              font-size: 5.8rem;
+              margin-bottom: 2rem;
+            }
+            &.light {
+              color: $brand-black;
+            }
+          }
+          h1 {
+            font-size: 6.2rem;
+          }
+          p {
+            max-width: 70%;
+            font-size: 2.2rem;
+            text-align: center;
+            line-height: 2rem;
+          }
+          .box-btn {
+            width: 75%;
+            height: 2rem;
+            justify-content: center;
+            .btn-prymary {
+              margin-top: 2.5rem;
+              padding: 0.3rem 1rem;
+              border-radius: 1rem;
+              a {
+                font-size: 2.7rem;
+              }
+            }
+          }
+        }
+        .box-right-hero {
+          width: 100%;
+          .img-hero {
+            width: 50%;
+            top: -17rem;
+            left: 0rem;
+            right: 0rem;
+          }
+          .img-x2 {
+            width: 20%;
+            top: 5rem;
+            left: 0rem;
+          }
+          .social-hero {
+            flex-direction: row;
+            gap: 1rem;
+            top: 15rem;
+            right: 0rem;
+            left: 0;
+            a {
+          img {
+            width: 4rem;
+          }
+             
+            }
+          }
+          .img-pontos2 {
+            width: 7%;
+            bottom: -15rem;
+            right: 5rem;
+
+          }
+        }
+      }
+
+    }
+
+    @include responsive(414px) {
+    
+      .container {
+        display: flex;
+        flex-direction: column;
+
+        .box-left-hero {
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin-top: -38rem;
+          .img-pontos {
+            width: 7%;
+            position: absolute;
+            top: 30rem;
+            left: 0rem;
+          }
+          .img-x {
+            width: 30%;
+            margin-bottom: 1rem;
+          }
+          h2 {
+            font-size: 2.5rem;
+            &:last-of-type {
+              font-size: 3rem;
+              margin-bottom: 2rem;
+            }
+            &.light {
+              color: $brand-black;
+            }
+          }
+          h1 {
+            font-size: 3.7rem;
+          }
+          p {
+            max-width: 80%;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 2rem;
+          }
+          .box-btn {
+            width: 75%;
+            height: 2rem;
+            justify-content: center;
+            .btn-prymary {
+              margin-top: 2rem;
+              padding: 0.1rem 0.7rem;
+              border-radius: 1rem;
+              a {
+                font-size: 1.7rem;
+              }
+            }
+          }
+        }
+        .box-right-hero {
+          width: 100%;
+          .img-hero {
+            width: 80%;
+            top: -17rem;
+            left: 0rem;
+            right: 0rem;
+          }
+          .img-x2 {
+            width: 30%;
+            top: -5rem;
+            left: -4rem;
+          }
+          .social-hero {
+            flex-direction: row;
+            gap: 1rem;
+            top: 10rem;
+            right: 0rem;
+            left: 0;
+            a {
+              img {
+                width: 3rem;
+              }
+             
+            }
+          }
+          .img-pontos2 {
+            width: 7%;
+            bottom: -10rem;
+            right: 1rem;
+
+          }
+        }
+      }
+
+    }
+    
+    @include responsive(375px) {
+    
+      .container {
+        display: flex;
+        flex-direction: column;
+
+        .box-left-hero {
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          margin-top: -25rem;
+          .img-pontos {
+            width: 10%;
+            position: absolute;
+            top: 20rem;
+            left: 0rem;
+          }
+          .img-x {
+            width: 30%;
+            margin-bottom: 1rem;
+          }
+          h2 {
+            font-size: 2rem;
+            &:last-of-type {
+              font-size: 2.5rem;
+              margin-bottom: 2rem;
+            }
+            &.light {
+              color: $brand-black;
+            }
+          }
+          h1 {
+            font-size: 3.2rem;
+          }
+          p {
+            max-width: 75%;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 2rem;
+          }
+          .box-btn {
+            width: 75%;
+            height: 2rem;
+            justify-content: center;
+            .btn-prymary {
+              margin-top: 2rem;
+              padding: 0.1rem 0.7rem;
+              border-radius: 1rem;
+              a {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+        .box-right-hero {
+          width: 100%;
+          .img-hero {
+            width: 65%;
+            top: -10rem;
+            left: 0rem;
+            right: 0rem;
+          }
+          .img-x2 {
+            width: 30%;
+            top: -5rem;
+            right: 25rem;
+          }
+          .social-hero {
+            flex-direction: row;
+            gap: 1rem;
+            top: 7rem;
+            right: 0rem;
+            left: 0;
+            a {
+              img {
+                width: 2.5rem;
+              }
+             
+            }
+          }
+          .img-pontos2 {
+            width: 10%;
+            bottom: -5rem;
+            right: 1rem;
+
+          }
+        }
+      }
+
+    }
+    
   }
+
+  
 }
