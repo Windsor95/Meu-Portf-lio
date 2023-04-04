@@ -1,0 +1,15 @@
+.btn-prymary {
+  background-color: $brand-blue;
+  color: $brand-white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1.6rem;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+  &:hover {
+    background-color: $brand-white;
+    color: $brand-blue;
+    border: 2px solid $brand-blue;
+  }
+}
