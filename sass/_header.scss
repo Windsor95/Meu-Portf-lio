@@ -7,18 +7,23 @@ header {
   align-items: center;
   padding: 1.5rem;
   position: fixed;
+  background: $brand-gradient;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 3000;
+
+  &.light {
+    background: $brand-gradient-light;
+  }
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .btn-menu-mobile{
+    .btn-menu-mobile {
       display: none;
-     width: 3rem;
+      width: 3rem;
     }
     .nav-header {
       ul {
@@ -36,7 +41,7 @@ header {
             }
             &:hover {
               &:after {
-                content: "";
+                content: '';
                 margin-top: 0.5rem;
                 display: block;
                 width: 100%;
@@ -87,17 +92,15 @@ header {
 
   @include responsive(1200px) {
     height: 7rem;
-   .container {
-    .logo-main {
-      a {
-        img{
-          width: 13rem;
-          
+    .container {
+      .logo-main {
+        a {
+          img {
+            width: 13rem;
+          }
         }
       }
-    }
       .nav-header {
-       
         ul {
           li {
             a {
@@ -105,43 +108,36 @@ header {
             }
           }
         }
-        
       }
       .dark-light-mode {
-  
         .dark-mode {
           width: 2rem;
           height: 2rem;
           padding: 0.3rem;
-        
         }
         .light-mode {
           width: 2rem;
           height: 2rem;
           padding: 0.3rem;
-      
         }
       }
-      
     }
   }
   @include responsive(820px) {
-    
     .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .btn-menu-mobile{
-        display: block;
-        width: 4rem;
-       }
+      // .btn-menu-mobile {
+      //  display: block;
+      //  width: 4rem;
+      //}
       .logo-main img {
         margin: 0 auto;
-        width:100%;
+        width: 100%;
       }
       .nav-header {
-        display: none;
-        
+        //display: none;
       }
       .dark-light-mode {
         display: flex;
@@ -150,11 +146,8 @@ header {
         background-color: $brand-blue;
         border-radius: 2rem;
         padding: 0.3rem 0.3rem;
-  
-      
       }
     }
-  
   }
   @include responsive(414px) {
     width: 100%;
@@ -164,17 +157,16 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .btn-menu-mobile{
+      .btn-menu-mobile {
         display: block;
         width: 2.5rem;
-       }
+      }
       .logo-main img {
         margin: 0 auto;
         width: 80%;
       }
       .nav-header {
         display: none;
-        
       }
       .dark-light-mode {
         display: flex;
@@ -183,23 +175,18 @@ header {
         background-color: $brand-blue;
         border-radius: 2rem;
         padding: 0.3rem 0.3rem;
-  
+
         .dark-mode {
           width: 1.5rem;
           height: 1.5rem;
           padding: 0.3rem;
-
         }
         .light-mode {
           width: 1.5rem;
           height: 1.5rem;
           padding: 0.3rem;
-         
         }
       }
     }
-  
   }
 }
-
-

@@ -5,7 +5,12 @@ $brand-white: #ffffff;
 $brand-black: #000000;
 
 //Gradients
-$brand-gradient: linear-gradient(117.04deg, #121212 14.79%, #000000 104.8%);
+$brand-gradient: linear-gradient(118.12deg, #041c26 14.8%, #000000 85.17%);
+$brand-gradient-light: linear-gradient(
+  117.04deg,
+  #ffffff 14.79%,
+  #eeeeee 104.8%
+);
 
 //gray
 $gray-100: #f8f9fa;

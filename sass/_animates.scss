@@ -9,6 +9,17 @@
     transform: translateY(0px);
   }
 }
+@keyframes floating02 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 @keyframes enterasside {
   0% {
     width: 0%;
@@ -16,5 +27,15 @@
 
   100% {
     width: 100%;
+  }
+}
+
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(87% + 4px);
+  }
+  100% {
+    left: 0%;
   }
 }
