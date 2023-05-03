@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css" />
-    <title>Windsor Dev</title>
-  </head>
-  <body>
-    <header data-aos="fade-down" data-aos-duration="1000">
-      <div class="container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css" />
+  <title>Windsor Dev</title>
+</head>
+
+<body>
+  <header class="header" data-aos="fade-down" data-aos-duration="1000">
+    <div class="container">
+      <div class="btn-menu-mobile" onclick="openMenu()">
+        <img class="js-btn-mob" src="./img/openMenuMob.svg" alt="menu" />
+      </div>
       <div class="logo-main">
-        <a href=""><img src="./img/logo-main.svg"  alt="logo main" /></a>
+        <a class="js-back-home" onclick="backHome()" href="#s-hero"><img src="./img/logo-main.svg" alt="logo main" /></a>
       </div>
       <nav class="nav-header">
-        <ul >
-          <li><a class="js-nav-header " href="">Projetos</a></li>
-          <li><a class="js-nav-header " href="">Habilidades</a></li>
-          <li><a class="js-nav-header " href="">Sobre</a></li>
-          <li><a class="js-nav-header " href="">Hobbies</a></li>
-          <li><a class="js-nav-header " href="">Contato</a></li>
+        <ul>
+          <li><a class="js-nav-header " onclick="openProjetos()" href="#s-portifolio">Projetos</a></li>
+          <li><a class="js-nav-header " onclick="openHabilidades()" href="#s-halidades">Habilidades</a></li>
+          <li><a class="js-nav-header " onclick="openSobre()" href="#s-sobre">Sobre</a></li>
+          <!--<li><a class="js-nav-header " onclick="openHobbies()" href="#s-hobbies">Hobbies</a></li>-->
+          <li><a class="js-nav-header " onclick="openContatos()" href="#s-contatos">Contato</a></li>
         </ul>
       </nav>
       <div class="dark-light-mode">
@@ -33,71 +38,327 @@
         </div>
       </div>
     </div>
-    </header>
-    <main>
-      <section class="s-hero">
-        <div class="container">
-          <div class="box-left-hero" data-aos="fade-right"  >
-            <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
-            <img class="img-x" src="./img/design-xxxx.svg" alt="" />
-            <h2>OLÁ, SEJA BEM-VINDO(A)</h2>
-            <h1>EU SOU</h1>
-            <h2>DESENVOLVEDOR</h2>
-            <p >
-              Sou apaixonado por criar interfaces incríveis e funcionais que
-              melhorem a experiência do usuário na web.
-            </p>
-            <div class="box-btn">
+  </header>
+  <main>
+    <section class="s-hero" id="s-hero">
+      <div class="container">
+        <div class="box-left-hero" data-aos="fade-right">
+          <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+          <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+          <h2>OLÁ, SEJA BEM-VINDO(A)</h2>
+          <h1>EU SOU</h1>
+          <h2 class="change-text">
+            <div class="bg-h2"></div>
+          </h2>
+          <p>
+            Sou apaixonado por criar interfaces incríveis e funcionais que
+            melhorem a experiência do usuário na web.
+          </p>
+          <div class="box-btn">
             <button class="btn-prymary" data-aos="zoom-in" data-aos-delay="300">
-             <a href="https://drive.google.com/file/d/1sM3g1gyp-gv2QcKhgpLQmwwVmOQco3Vp/view?usp=sharing" target="_blank">DOWNLOAD CV</a> </button>
-            </div>
+              <a href="https://drive.google.com/file/d/1sM3g1gyp-gv2QcKhgpLQmwwVmOQco3Vp/view?usp=sharing"
+                target="_blank">DOWNLOAD CV</a> </button>
           </div>
-          <div class="box-right-hero" data-aos="fade-left">
-            <img class="img-hero" src="./img/hero-img.png" alt="" />
-            <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
-            <div class="social-hero">
-              <a href="https://www.linkedin.com/in/windsorsbarbosa/" target="_blank"><img src="./img/logo-linkedin.svg" alt="" data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="400"
-                data-aos-offset="0" /></a>
-              <a href="#" target="_blank"><img src="./img/logo-dribbble.svg" alt=""data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="600"
-                data-aos-offset="0" /></a>
-              <a href="https://github.com/Windsor95" target="_blank"><img src="./img/logo-github.svg" alt="" data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="800"
-                data-aos-offset="0"/></a>
-              <a href="https://www.instagram.com/windsor.greene/" target="_blank"><img src="./img/logo-instagram.svg" alt=""data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="1000"
-                data-aos-offset="0" /></a>
-              <a href="https://www.youtube.com/channel/UC1mJSBWHz6Gsdh4jigOb5tA" target="_blank"><img src="./img/logo-youtube.svg" alt="" data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="1200"
-                data-aos-offset="0"/></a>
-              <a href="https://www.facebook.com/profile.php?id=100005774989142" target="_blank"><img src="./img/logo-facebook.svg" alt="" data-aos="fade-zoom-in"
-                data-aos-easing="ease-in-back"
-                data-aos-delay="1400"
-                data-aos-offset="0"/></a>
-            </div>
-            <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
-            </div>
-          </div>
-
         </div>
-      </section>
-    </main>
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <div class="box-right-hero" data-aos="fade-left">
+          <img class="img-hero" src="./img/hero-img.png" alt="" />
+          <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
+          <div class="social-hero">
+            <a href="https://www.linkedin.com/in/windsorsbarbosa/" target="_blank"><img src="./img/logo-linkedin.svg"
+                alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400"
+                data-aos-offset="0" /></a>
+            <a href="#" target="_blank"><img src="./img/logo-dribbble.svg" alt="" data-aos="fade-zoom-in"
+                data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0" /></a>
+            <a href="https://github.com/Windsor95" target="_blank"><img src="./img/logo-github.svg" alt=""
+                data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0" /></a>
+            <a href="https://www.instagram.com/windsor.greene/" target="_blank"><img src="./img/logo-instagram.svg"
+                alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000"
+                data-aos-offset="0" /></a>
+            <a href="https://www.youtube.com/channel/UC1mJSBWHz6Gsdh4jigOb5tA" target="_blank"><img
+                src="./img/logo-youtube.svg" alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="1200" data-aos-offset="0" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100005774989142" target="_blank"><img
+                src="./img/logo-facebook.svg" alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+                data-aos-delay="1400" data-aos-offset="0" /></a>
+          </div>
+          <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+        </div>
+      </div>
 
-        <script>
-            AOS.init({
-                  duration: 2000,
-                  once: true,
-                  disabled: 'mobile',
-                });
-        </script>
-    
-  </body>
+      </div>
+    </section>
+    <section class="design-portfolio-blue">
+    </section>
+    <section class="design-portfolio-light-blue">
+    </section>
+    <section class="design-portfolio-white">
+      <img src="./img/logo-main.svg" alt="">
+    </section>
+    <section class="s-portfolio" id="s-portifolio">
+      <div class="container">
+        <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+
+        <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
+        <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+        <h2 class="title-projeto">
+          <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+          MEUS PROJETOS</h2>
+        <div class="container-projetos">
+          <div class="hover-efeito" data-aos="zoom-in">
+            <!-- BOX INICIO -->
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+            <div class="box-projeto first">
+              <img class="img-projeto" src="./img/Projeto01.png" alt="">
+              <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
+              <div class="box-linguagens">
+                <img src="./img/HTML.png" alt="">
+                <img src="./img/CSS.png" alt="">
+                <img src="./img/SASS.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+              </div>
+              <button class="btn-primary">Saiba mais</button>
+            </div>
+
+            <!-- BOX FIM -->
+          </div>
+        </div>
+    </section>
+
+    <section class="s-habilidades" id="s-halidades">
+      <div class="container">
+        <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+        <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
+        <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+        <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+
+        <h2>Habilidades</h2>
+        <div class="container-habilidades">
+          <div class="box-habilidades">
+            <div class="box-conteudos">
+              <h3>DESENVOLVEDOR</h3>
+              <p>Utilizo as mais diversas tecnologias, capaz de criar sites e aplicações web completas e funcionais,
+                buscando sempre atualização para oferecer resultados de qualidade e eficiência.</p>
+              <div class="box-habilidades-icon">
+                <img src="./img/html.png" alt="">
+                <img src="./img/css.png" alt="">
+                <img src="./img/sass.png" alt="">
+                <img src="./img/JAVASCCRIPT.png" alt="">
+                <img src="./img/REACTJS.png" alt="">
+                <img src="./img/NODEJS.png" alt="">
+              </div>
+            </div>
+            <div class="box-img">
+              <img src="./img/desenvolvedor-img.png" alt="">
+            </div>
+          </div>
+          <div class="box-habilidades">
+            <div class="box-conteudos">
+              <h3>UX/UI DESIGNER </h3>
+              <p>Como Designer, crio layouts modernos e completos utilizando tecnologias variadas e me mantenho
+                atualizado para oferecer resultados eficientes e de alta qualidade aos usuários finais.</p>
+              <div class="box-habilidades-icon">
+                <img src="./img/PHOTOSHOP.png" alt="" />
+                <img src="./img/FIGMA.png" alt="" />
+                <img src="./img/ADOBEXD.png" alt="" />
+                <img src="./img/MIRO.png" alt="" />
+                <img src="./img/WEBFLOW.png" alt="" />
+                <img src="./img/INVISION.png" alt="" />
+              </div>
+            </div>
+            <div class="box-img">
+              <img src="./img/ux-design-img.png" alt="">
+            </div>
+          </div>
+          <div class="box-habilidades">
+            <div class="box-conteudos">
+              <h3>ILUSTRADOR</h3>
+              <p>Como Ilustrador, utilizo tecnologias diversas para criar ilustrações com alta qualidade e eficiência.
+                Estou sempre me atualizando para oferecer resultados que satisfaçam as necessidades dos clientes e
+                usuários.</p>
+              <div class="box-habilidades-icon">
+                <img src="./img/PHOTOSHOP.png" alt="" />
+                <img src="./img/ILLUSTRATOR.png" alt="" />
+                <img src="./img/CLIPE STUDIO.png" alt="" />
+                <img src="./img/CORELDRAW.png" alt="" />
+                <img src="./img/SKETCHBOOK.png" alt="" />
+                <img src="./img/KRITA.png" alt="" />
+              </div>
+            </div>
+            <div class="box-img">
+              <img src="./img/ilustraçao-img.png" alt="">
+            </div>
+          </div>
+        </div>
+
+    </section>
+
+    <section class="s-sobre" id="s-sobre">
+      <div class="container">
+        <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+        <!--<img class="img-x2" src="./img/design-xxxx.svg" alt="" />-->
+        <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+
+        <div class="box-sobre-left" >
+          <div class="box-img-sobre">
+            <img src="./img/foto.png" alt="">
+          </div>
+        </div>
+        <div class="box-sobre-right" >
+          <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+          <h2>windsor barbosa</h2>
+          <p>
+            Desde o início da minha carreira, trabalhei com diversas tecnologias,
+            como HTML, CSS, JavaScript, React, Vue e muitas outras. Acredito que a
+            combinação certa de tecnologia e design pode criar soluções digitais únicas
+            e impactantes. Trabalho com a missão de fornecer aos meus clientes soluções
+            personalizadas que atendam às suas necessidades específicas. Minha abordagem
+            é colaborativa e baseada em resultados, trabalhando em estreita colaboração
+            com os clientes para entender seus objetivos e criar soluções eficazes.
+            Estou sempre buscando aprender e crescer como desenvolvedor(a) para fornecer
+            o melhor serviço possível aos meus clientes.
+          </p>
+          <img class="img-x-2" src="./img/design-xxxx.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- <section class="s-hobbies" id="s-hobbies">
+        <div class="container">
+          <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+          <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
+          <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+          <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+      </section>-->
+    <section class="s-contatos" id="s-contatos">
+      <div class="container">
+        <img class="img-pontos" src="./img/design-pontos.svg" alt="" />
+        <img class="img-x2" src="./img/design-xxxx.svg" alt="" />
+        <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
+        <img class="img-x" src="./img/design-xxxx.svg" alt="" />
+
+        <h2>contato</h2>
+        <p>Se você está procurando um desenvolvedor Front-end para ajudar a criar uma solução única para sua empresa,
+          entre em contato. Estou animado(a) para trabalhar com você e ajudar a levar sua ideia para o próximo nível!
+        </p>
+        <div class="box-iniciar-projeto">
+          <h3>Quer iniciar um projeto ?</h3>
+          <button>
+            <a class="submit"
+              href="mailto:windsor.barboza@gmail.com?subject=Orçamento para projeto web/mobile personalizado"
+              target="_blank">
+              <img src="./img/rocket.svg" alt="">
+              <p>vamos nessa</p>
+            </a>
+          </button>
+        </div>
+        <div class="social-contaos">
+          <a href="https://www.linkedin.com/in/windsorsbarbosa/" target="_blank"><img src="./img/logo-linkedin.svg"
+              alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400"
+              data-aos-offset="0" /></a>
+          <a href="#" target="_blank"><img src="./img/logo-dribbble.svg" alt="" data-aos="fade-zoom-in"
+              data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0" /></a>
+          <a href="https://github.com/Windsor95" target="_blank"><img src="./img/logo-github.svg" alt=""
+              data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="800" data-aos-offset="0" /></a>
+          <a href="https://www.instagram.com/windsor.greene/" target="_blank"><img src="./img/logo-instagram.svg" alt=""
+              data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="1000" data-aos-offset="0" /></a>
+          <a href="https://www.youtube.com/channel/UC1mJSBWHz6Gsdh4jigOb5tA" target="_blank"><img
+              src="./img/logo-youtube.svg" alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+              data-aos-delay="1200" data-aos-offset="0" /></a>
+          <a href="https://www.facebook.com/profile.php?id=100005774989142" target="_blank"><img
+              src="./img/logo-facebook.svg" alt="" data-aos="fade-zoom-in" data-aos-easing="ease-in-back"
+              data-aos-delay="1400" data-aos-offset="0" /></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 2000,
+      once: true,
+      disabled: 'mobile',
+    });
+
+  </script>
+
+</body>
+
 </html>

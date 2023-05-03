@@ -1,0 +1,21 @@
+<section class="s-portfolio">
+  <div class="container"></div>
+</section>
+
+.s-portfolio { position: absolute; bottom: 0; left: 0; z-index: 1001; width:
+100%; height: calc(100vh - 10rem); background: $brand-gradient; .container {
+display: flex; align-items: center; justify-content: center; } }
+
+<img src="./img/PHOTOSHOP.png" alt="" />
+<img src="./img/FIGMA.png" alt="" />
+<img src="./img/ADOBEXD.png" alt="" />
+<img src="./img/MIRO.png" alt="" />
+<img src="./img/WEBFLOW.png" alt="" />
+<img src="./img/INVISION.png" alt="" />
+
+<img src="./img/PHOTOSHOP.png" alt="" />
+<img src="./img/ILLUSTRATOR.png" alt="" />
+<img src="./img/CLIPE STUDIO.png" alt="" />
+<img src="./img/CORELDRAW.png" alt="" />
+<img src="./img/SKETCHBOOK.png" alt="" />
+<img src="./img/KRITA.png" alt="" />
