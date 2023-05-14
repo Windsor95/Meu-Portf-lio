@@ -4,16 +4,40 @@ const navStyle = document.querySelectorAll('.js-nav-header');
 const titulo01 = document.querySelector('.box-left-hero h2');
 const titulo02 = document.querySelector('.box-left-hero h1');
 const header = document.querySelector('.header');
+<<<<<<< HEAD
+
+function saveThemeToLocalStorage(theme) {
+  localStorage.setItem('theme', theme);
+}
+
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark') {
+  darkMode();
+} else {
+  lightMode();
+}
+=======
+>>>>>>> 652d8cf7da90daf27a13e4871847236744086a8a
 
 function lightMode() {
+  saveThemeToLocalStorage('light');
+
   navStyle.forEach(element => {
     element.classList.add('light');
   });
 
   header.classList.add('light');
+<<<<<<< HEAD
+  //document.body.classList.add('light');
+  titulo01.classList.add('light');
+  titulo02.classList.add('light');
+  document.querySelector('.s-hero').classList.add('light');
+=======
   document.body.classList.add('light');
   titulo01.classList.add('light');
   titulo02.classList.add('light');
+>>>>>>> 652d8cf7da90daf27a13e4871847236744086a8a
   document.querySelector('.s-portfolio').classList.add('light');
   document.querySelector('.s-portfolio h2').style.color = '#000000';
   document.querySelector('.s-habilidades').classList.add('light');
@@ -28,6 +52,8 @@ function lightMode() {
 }
 
 function darkMode() {
+  saveThemeToLocalStorage('dark');
+
   navStyle.forEach(element => {
     element.classList.remove('light');
   });
@@ -36,6 +62,10 @@ function darkMode() {
   document.body.classList.remove('light');
   titulo01.classList.remove('light');
   titulo02.classList.remove('light');
+<<<<<<< HEAD
+  document.querySelector('.s-hero').classList.remove('light');
+=======
+>>>>>>> 652d8cf7da90daf27a13e4871847236744086a8a
   document.querySelector('.s-portfolio').classList.remove('light');
   document.querySelector('.s-portfolio h2').style.color = '#ffffff';
   document.querySelector('.s-habilidades').classList.remove('light');
