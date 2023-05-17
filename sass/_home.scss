@@ -736,7 +736,7 @@ main {
             justify-content: center;
             align-items: center;
             gap: 2rem;
-            background: $brand-blue;
+            background: $brand-black;
             width: 22%;
             height: 20rem;
             overflow: hidden;
@@ -754,7 +754,7 @@ main {
 
             .logo-projeto {
               display: none;
-              width: 60%;
+              width: 50%;
               max-width: 100%;
               height: auto;
               object-fit: cover;
@@ -801,21 +801,23 @@ main {
 
               &:hover {
                 background-color: $brand-white;
-                color: #c01a46;
+                 a {
+                  color: #c01a46;
+                 }
               }
             }
 
             &:hover {
               transform: scale(1.1);
-              border-radius: 2rem;
-              border: 2px solid $brand-white;
-              filter: drop-shadow(0.1rem 0.1rem 0.5rem $brand-blue);
+             // border-radius: 2rem;
+             // border: 2px solid $brand-white;
+             // filter: drop-shadow(0.1rem 0.1rem 0.5rem $brand-blue);
 
               .img-projeto {
                 width: 100%;
-                transform: scale(1.1);
-                filter: blur(0.2rem);
-                opacity: 0.9;
+                transform: scale(1.2);
+                //filter: blur(0.1rem);
+                opacity: 0.3;
               }
 
               .box-linguagens {
@@ -1201,10 +1203,7 @@ main {
     @include responsive(820px) {
       height: 100vh;
       .container {
-        .title-projeto {
-          font-size: 5.2rem;
-          text-align: center;
-        }
+        
         .img-pontos {
           width: 7%;
           top: 10rem;
@@ -1212,7 +1211,7 @@ main {
         }
 
         .img-x {
-          width: 40%;
+          width: 30%;
           top: 10rem;
           margin: 0 auto;
           margin-bottom: 1rem;
@@ -1234,43 +1233,116 @@ main {
           transform: rotate(0deg);
           margin-bottom: 2rem;
         }
-
-        .container-projetos {
-          height: 70%;
-
-          .hover-efeito {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            .box-projeto {
-              gap: 1rem;
-              width: 40%;
-              margin-bottom: 1rem;
-              img {
-              }
-
-              .logo-projeto {
-              }
-
-              .box-linguagens {
-                img {
+        .container-habilidades {
+          width: 100%;
+          height: 65rem;
+          display: flex;
+          gap: 2rem;
+          justify-content: space-between;
+          margin-top: 7rem;
+          .box-habilidades {
+            width: 31%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-radius: 8px;
+  
+            &:hover {
+              .box-conteudos {
+                .box-habilidades-icon {
+                  display: flex;
                 }
               }
-
-              button {
+  
+              .box-img {
+                height: 100%;
               }
             }
+  
+            .box-conteudos {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 50rem;
+              background: linear-gradient(
+                140deg,
+                rgba(145, 216, 247, 1) 0%,
+                rgba(22, 146, 197, 1) 48%,
+                rgba(5, 107, 149, 1) 100%
+              );
+              padding: 3rem;
+              border-radius: 2rem;
+              transition: all 0.3s ease-in-out;
+  
+              h3 {
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 60px;
+                text-align: center;
+              }
+  
+              p {
+                font-size: 1.1rem;
+                text-align: justify;
+                margin-bottom: 2rem;
+                line-height: 2rem;
+              }
+  
+              .box-habilidades-icon {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+                transition: all 0.3s ease-in-out;
+  
+                img {
+                  width: 25%;
+                  transition: all 0.3s ease-in-out;
+                  border-radius: 50%;
+                  border: 2px solid $brand-white;
+  
+                  &:hover {
+                    transform: scale(1.05);
+                    filter: drop-shadow(
+                      0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.205)
+                    );
+                  }
+                }
+              }
+            }
+  
+            .box-img {
+              width: 100%;
+  
+              border-radius: 2rem;
+  
+              img {
+                border-radius: 2rem;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+              
+            }
+           
           }
         }
+        
       }
     }
     @include responsive(414px) {
       visibility: visible;
       transform: translateX(0%);
       position: initial;
-      z-index: 4000;
       width: 100%;
+      height: 110rem;
+      padding-bottom: 25rem;
       .container {
+        width: 100%;
+        max-width: 90%;
         padding-top: 2rem;
         h1 {
           font-size: 3.2rem;
@@ -1278,8 +1350,8 @@ main {
         }
 
         .img-pontos {
-          width: 10%;
-          top: 7rem;
+          width: 7%;
+          top: 3rem;
           left: 1rem;
         }
 
@@ -1291,20 +1363,21 @@ main {
         }
 
         .img-pontos2 {
+          width: 7%;
           bottom: 3rem;
-          right: 5rem;
-          transform: rotate(90deg);
+          right: 1rem;
+          transform: rotate(0deg);
         }
 
         .img-x2 {
           width: 30%;
           bottom: 5rem;
           left: 0rem;
-          transform: rotate(90deg);
-          margin-bottom: 2rem;
+          transform: rotate(0deg);
+          margin-bottom: -3rem;
         }
         h2 {
-          font-size: 5rem;
+          font-size: 3.2rem;
           text-transform: uppercase;
           margin-bottom: 2rem;
         }
@@ -1314,8 +1387,10 @@ main {
           height: 65rem;
           display: flex;
           gap: 4rem;
-          justify-content: space-between;
+          justify-content: center;
           flex-wrap: wrap;
+          position: initial;
+          margin: 0 auto;
           .box-habilidades {
             width: 90%;
             height: 40%;
@@ -1323,7 +1398,7 @@ main {
             flex-direction: column;
             gap: 2rem;
             border-radius: 8px;
-
+            position: initial;
             &:hover {
               .box-conteudos {
                 .box-habilidades-icon {
@@ -1339,6 +1414,8 @@ main {
             .box-conteudos {
               display: flex;
               flex-direction: column;
+              align-items: center;
+              justify-content: center;
               width: 100%;
               height: 50rem;
               background: linear-gradient(
@@ -1347,32 +1424,34 @@ main {
                 rgba(22, 146, 197, 1) 48%,
                 rgba(5, 107, 149, 1) 100%
               );
-              padding: 3rem;
+              padding: 1rem;
               border-radius: 2rem;
               transition: all 0.3s ease-in-out;
 
               h3 {
                 font-weight: 700;
-                font-size: 3rem;
+                font-size: 2.5rem;
                 line-height: 60px;
                 text-align: center;
+                margin-bottom: 2rem;
               }
 
               p {
+                display: none;
                 font-size: 1.2rem;
                 text-align: justify;
                 margin-bottom: 3rem;
               }
 
               .box-habilidades-icon {
-                display: none;
+                display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 1rem;
                 transition: all 0.3s ease-in-out;
-
+margin-bottom: 2rem;
                 img {
                   width: 25%;
                   transition: all 0.3s ease-in-out;
@@ -1398,71 +1477,7 @@ main {
         }
       }
     }
-    @include responsive(375px) {
-      position: initial;
-      width: 100%;
-      height: 100%;
-      .container {
-        padding-top: 2rem;
-        .title-projeto {
-          font-size: 3.2rem;
-          text-align: center;
-        }
-
-        .img-pontos {
-          width: 10%;
-          top: 7rem;
-          left: 1rem;
-        }
-
-        .img-x {
-          width: 40%;
-          top: 10rem;
-          margin: 0 auto;
-          margin-bottom: 1rem;
-        }
-
-        .img-pontos2 {
-          bottom: 3rem;
-          right: 5rem;
-          transform: rotate(90deg);
-        }
-
-        .img-x2 {
-          width: 30%;
-          bottom: 5rem;
-          left: 0rem;
-          transform: rotate(90deg);
-          margin-bottom: 2rem;
-        }
-
-        .container-projetos {
-          height: 70%;
-
-          .hover-efeito {
-            flex-direction: column;
-            flex-wrap: wrap;
-            .box-projeto {
-              gap: 1rem;
-              width: 100%;
-              img {
-              }
-
-              .logo-projeto {
-              }
-
-              .box-linguagens {
-                img {
-                }
-              }
-
-              button {
-              }
-            }
-          }
-        }
-      }
-    }
+    
   }
   .s-sobre {
     visibility: hidden;
@@ -1528,6 +1543,8 @@ main {
               transform: translateX(-1rem);
               box-shadow: 0.5rem 0rem 1.5rem rgba(0, 0, 0, 0.5);
             }
+
+           
           }
         }
       }
@@ -1566,50 +1583,8 @@ main {
         }
       }
     }
-    @include responsive(1200px) {
-    }
+   
     @include responsive(820px) {
-      height: 100vh;
-      .container {
-        .title-projeto {
-          font-size: 5.2rem;
-          text-align: center;
-        }
-        .img-pontos {
-          width: 7%;
-          top: 10rem;
-          left: 1rem;
-        }
-
-        .img-x {
-          width: 40%;
-          top: 10rem;
-          margin: 0 auto;
-          margin-bottom: 1rem;
-        }
-
-        .img-pontos2 {
-          width: 7%;
-          bottom: 1rem;
-          right: 5rem;
-          transform: rotate(90deg);
-        }
-
-        .img-x2 {
-          width: 20%;
-          bottom: 1rem;
-          left: 0rem;
-          right: 0rem;
-          margin: 0 auto;
-          transform: rotate(0deg);
-          margin-bottom: 2rem;
-        }
-      }
-    }
-    @include responsive(414px) {
-      visibility: visible;
-      transform: translateX(0%);
-      position: initial;
       width: 100%;
       height: 100%;
       .container {
@@ -1617,35 +1592,34 @@ main {
         padding-top: 2rem;
 
         .img-pontos {
-          width: 10%;
+          width: 7%;
           top: 7rem;
           left: 1rem;
         }
 
-        .img-x {
-          width: 40%;
-          top: 10rem;
-          margin: 0px 0px 0px 0px;
-        }
+        
 
         .img-pontos2 {
-          bottom: 3rem;
-          right: 5rem;
+          width: 7%;
+          bottom: 0rem;
+          right: 3rem;
           transform: rotate(90deg);
         }
 
         .img-x-2 {
-          width: 40%;
-          bottom: 5rem;
-          left: 1rem;
-          transform: rotate(90deg);
-          margin-bottom: 2rem;
+          width: 30%;
+          position: absolute;
+          bottom: 4rem;
+          left: 0rem;
+          right: 0rem;
+          transform: rotate(0deg);
+          margin: 0 auto;
         }
         .box-sobre-left {
+          padding-top: 4rem;
           width: 100%;
-          max-width: 80%;
-          height: 30rem;
-          margin-bottom: 2rem;
+          max-width: 50%;
+          height: 45rem;
           .box-img-sobre {
             img {
               height: 100%;
@@ -1667,9 +1641,15 @@ main {
           flex-direction: column;
           flex-wrap: wrap;
 
+          .img-x {
+            width: 40%;
+            top: 10rem;
+          }
+
           h2 {
+            margin-top: 2rem;
             margin-bottom: 2.2rem;
-            font-size: 2.7rem;
+            font-size: 5rem;
             font-weight: bold;
             text-align: center;
           }
@@ -1677,8 +1657,66 @@ main {
           p {
             text-align: justify;
             color: $brand-blue-light;
-            margin-bottom: 0rem;
+            margin-bottom: 7rem;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    @include responsive(414px) {
+      visibility: visible;
+      transform: translateX(0%);
+      position: initial;
+      .container {
+        .img-pontos {
+          width: 10%;
+        }
+
+        
+
+        .img-pontos2 {
+   
+        }
+
+        .img-x-2 {
+          bottom: 7rem;
+          left: -3rem;
+          transform: rotate(90deg);
+          margin-bottom: 2rem;
+          margin: 0px 0px ;
+        }
+        .box-sobre-left {
+          width: 100%;
+          max-width: 80%;
+          height: 30rem;
+          margin-bottom: 2rem;
+          .box-img-sobre {
+            img {
+         
+              &:hover {
+                transform: translateX(0rem);
+                transform: scale(0.9);
+                box-shadow: 0rem 0rem 1.5rem rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+        }
+
+        .box-sobre-right {
+
+          .img-x {
+
+            margin: 0px 0px 0px 0px;
+          }
+
+          h2 {
+            font-size: 2.7rem;
+          }
+
+          p {
+            margin-bottom: 3rem;
             font-size: 1.2rem;
+            line-height: 2rem;
           }
         }
       }
@@ -1884,10 +1922,7 @@ main {
     @include responsive(820px) {
       height: 100vh;
       .container {
-        .title-projeto {
-          font-size: 5.2rem;
-          text-align: center;
-        }
+        width: 90%;
         .img-pontos {
           width: 7%;
           top: 10rem;
@@ -1895,7 +1930,7 @@ main {
         }
 
         .img-x {
-          width: 40%;
+          width: 30%;
           top: 10rem;
           margin: 0 auto;
           margin-bottom: 1rem;
@@ -1909,7 +1944,7 @@ main {
         }
 
         .img-x2 {
-          width: 20%;
+          width: 30%;
           bottom: 1rem;
           left: 0rem;
           right: 0rem;
@@ -1918,30 +1953,92 @@ main {
           margin-bottom: 2rem;
         }
 
-        .container-projetos {
-          height: 70%;
-
-          .hover-efeito {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            .box-projeto {
-              gap: 1rem;
-              width: 40%;
-              margin-bottom: 1rem;
+        h2 {
+          font-size: 5rem;
+          text-transform: uppercase;
+          margin-bottom: 10rem;
+        }
+  
+        p {
+          width: 100%;
+          max-width: 119rem;
+          text-align: justify;
+          color: $brand-blue;
+          margin-bottom: 10rem;
+          font-size: 2.4rem;
+          line-height: 3.6rem;
+        }
+        .box-iniciar-projeto {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 119rem;
+          background: $brand-blue;
+          border-radius: 4rem;
+          padding: 3rem;
+  
+          h3 {
+            text-align: center;
+            font-size: 4rem;
+            text-transform: uppercase;
+          }
+  
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 45%;
+            background: $brand-white;
+            border-radius: 2rem;
+            padding: 1rem 1rem;
+            margin-left: 2rem;
+            transition: all 0.3s ease-in-out;
+  
+            .submit {
+              height: 8rem;
+              display: flex;
               img {
+                width: 25%;
+                margin-right: 1rem;
               }
-
-              .logo-projeto {
+  
+              p {
+                margin: auto 0;
+                font-weight: bold;
+                font-size: 2.2rem;
+                text-transform: uppercase;
+                color: $brand-blue;
               }
-
-              .box-linguagens {
-                img {
-                }
-              }
-
-              button {
-              }
+            }
+  
+            &:hover {
+              opacity: 0.7;
+              transform: scale(0.98);
+            }
+          }
+        }
+  
+        .social-contaos {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 100%;
+          max-width: 50%;
+          margin-top: 15rem;
+  
+          img {
+            width: 5rem;
+          }
+  
+          a {
+            opacity: 0.5;
+            transition: transform 0.3s ease-in-out;
+  
+            &:hover {
+              opacity: 1;
+              transform: translateY(0.5rem);
             }
           }
         }
@@ -1961,13 +2058,13 @@ main {
         }
 
         .img-pontos {
-          width: 10%;
-          top: 7rem;
+          width: 7%;
+          top: 4rem;
           left: 1rem;
         }
 
         .img-x {
-          width: 40%;
+          width: 30%;
           top: 10rem;
           margin: 0 auto;
           margin-bottom: 1rem;
@@ -1975,109 +2072,115 @@ main {
 
         .img-pontos2 {
           bottom: 3rem;
-          right: 5rem;
-          transform: rotate(90deg);
+          right: 1rem;
+          transform: rotate(0deg);
         }
 
         .img-x2 {
           width: 30%;
-          bottom: 5rem;
+          bottom: 0rem;
           left: 0rem;
-          transform: rotate(90deg);
+          transform: rotate(0deg);
           margin-bottom: 2rem;
         }
 
-        .container-projetos {
-          height: 70%;
-
-          .hover-efeito {
-            flex-direction: column;
-            flex-wrap: wrap;
-            .box-projeto {
-              gap: 1rem;
-              width: 100%;
-              img {
-              }
-
-              .logo-projeto {
-              }
-
-              .box-linguagens {
-                img {
-                }
-              }
-
-              button {
-              }
-            }
-          }
-        }
-      }
-    }
-    @include responsive(375px) {
-      position: initial;
-      width: 100%;
-      height: 100%;
-      .container {
-        padding-top: 2rem;
-        .title-projeto {
+        h2 {
           font-size: 3.2rem;
-          text-align: center;
-        }
-
-        .img-pontos {
-          width: 10%;
-          top: 7rem;
-          left: 1rem;
-        }
-
-        .img-x {
-          width: 40%;
-          top: 10rem;
-          margin: 0 auto;
-          margin-bottom: 1rem;
-        }
-
-        .img-pontos2 {
-          bottom: 3rem;
-          right: 5rem;
-          transform: rotate(90deg);
-        }
-
-        .img-x2 {
-          width: 30%;
-          bottom: 5rem;
-          left: 0rem;
-          transform: rotate(90deg);
+          text-transform: uppercase;
           margin-bottom: 2rem;
         }
+  
+        p {
+          width: 90%;
+          max-width: 90%rem;
+          text-align: justify;
+          color: $brand-blue;
+          margin-bottom: 2rem;
+          font-size: 1.2rem;
+          line-height: 2rem;
+        }
 
-        .container-projetos {
-          height: 70%;
-
-          .hover-efeito {
-            flex-direction: column;
-            flex-wrap: wrap;
-            .box-projeto {
-              gap: 1rem;
-              width: 100%;
+        .box-iniciar-projeto {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 90%;
+          background: $brand-blue;
+          border-radius: 4rem;
+          padding: 2rem;
+          margin-top: 4rem;
+          h3 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 3.5rem;
+            margin-bottom: 2rem;
+          }
+  
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 100%;
+            background: $brand-white;
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease-in-out;
+        margin: 0;
+            .submit {
+              height: 8rem;
+              display: flex;
               img {
+                width: 20%;
+                margin-right: 1rem;
               }
-
-              .logo-projeto {
+  
+              p {
+                margin: auto 0;
+                font-weight: bold;
+                font-size: 2.2rem;
+                text-transform: uppercase;
+                color: $brand-blue;
               }
-
-              .box-linguagens {
-                img {
-                }
-              }
-
-              button {
-              }
+            }
+  
+            &:hover {
+              opacity: 0.7;
+              transform: scale(0.98);
             }
           }
         }
+  
+        .social-contaos {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 0.7rem;
+          width: 100%;
+          max-width: 70%;
+          
+          margin: 2rem auto;
+          margin-bottom: 5rem;
+          img {
+            width: 5rem;
+          }
+  
+          a {
+            opacity: 0.5;
+            transition: transform 0.3s ease-in-out;
+  
+            &:hover {
+              opacity: 1;
+              transform: translateY(0.5rem);
+            }
+          }
+        }
+        
       }
     }
+    
   }
 }
