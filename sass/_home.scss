@@ -89,7 +89,7 @@ main {
           font-weight: 400;
           text-align: justify;
           line-height: 3rem;
-          color: $brand-blue-light;
+          color: $brand-blue;
         }
 
         .box-btn {
@@ -258,7 +258,7 @@ main {
       }
     }
 
-    @include responsive(820px) {
+    @include responsive(900px) {
       .container {
         display: flex;
         flex-direction: column;
@@ -362,14 +362,15 @@ main {
       }
     }
 
-    @include responsive(414px) {
+    @include responsive(500px) {
       position: initial;
+      height: 90rem;
       .container {
         display: flex;
         flex-direction: column;
 
         .box-left-hero {
-          position: relative;
+          position: initial;
           display: flex;
           width: 100%;
           height: 100%;
@@ -392,7 +393,7 @@ main {
 
             &:last-of-type {
               width: 80%;
-              font-size: 3rem;
+              font-size: 2.3rem;
               margin-bottom: 2rem;
             }
 
@@ -423,7 +424,7 @@ main {
               border-radius: 1rem;
 
               a {
-                font-size: 1.7rem;
+                font-size: 2rem;
               }
             }
           }
@@ -468,110 +469,7 @@ main {
       }
     }
 
-    @include responsive(375px) {
-      position: initial;
-      .container {
-        display: flex;
-        flex-direction: column;
-
-        .box-left-hero {
-          position: relative;
-          display: flex;
-          width: 100%;
-          height: 100%;
-          margin-top: -25rem;
-
-          .img-pontos {
-            width: 10%;
-            position: absolute;
-            top: 20rem;
-            left: 0rem;
-          }
-
-          .img-x {
-            width: 30%;
-            margin-bottom: 1rem;
-          }
-
-          h2 {
-            font-size: 2rem;
-
-            &:last-of-type {
-              font-size: 2.5rem;
-              margin-bottom: 2rem;
-            }
-
-            &.light {
-              color: $brand-black;
-            }
-          }
-
-          h1 {
-            font-size: 3.2rem;
-          }
-
-          p {
-            max-width: 75%;
-            font-size: 1.5rem;
-            text-align: center;
-            line-height: 2rem;
-          }
-
-          .box-btn {
-            width: 75%;
-            height: 2rem;
-            justify-content: center;
-
-            .btn-prymary {
-              margin-top: 2rem;
-              padding: 0.1rem 0.7rem;
-              border-radius: 1rem;
-
-              a {
-                font-size: 1.2rem;
-              }
-            }
-          }
-        }
-
-        .box-right-hero {
-          width: 100%;
-
-          .img-hero {
-            width: 65%;
-            top: -10rem;
-            left: 0rem;
-            right: 0rem;
-          }
-
-          .img-x2 {
-            width: 30%;
-            top: -5rem;
-            right: 25rem;
-          }
-
-          .social-hero {
-            flex-direction: row;
-            gap: 1rem;
-            top: 7rem;
-            right: 0rem;
-            left: 0;
-
-            a {
-              img {
-                width: 2.5rem;
-              }
-            }
-          }
-
-          .img-pontos2 {
-            width: 10%;
-            bottom: -5rem;
-            right: 1rem;
-          }
-        }
-      }
-    }
+    
   }
 
   .design-portfolio-blue {
@@ -845,7 +743,7 @@ main {
     }
     @include responsive(1200px) {
     }
-    @include responsive(820px) {
+    @include responsive(900px) {
       height: 100vh;
       .container {
         .title-projeto {
@@ -911,7 +809,7 @@ main {
         }
       }
     }
-    @include responsive(414px) {
+    @include responsive(500px) {
       visibility: visible;
       transform: translateX(0%);
       position: initial;
@@ -1185,10 +1083,8 @@ main {
 
           .box-img {
             width: 399px;
-
             border-radius: 2rem;
-
-            img {
+            video {         
               border-radius: 2rem;
               width: 100%;
               height: 100%;
@@ -1200,7 +1096,7 @@ main {
     }
     @include responsive(1200px) {
     }
-    @include responsive(820px) {
+    @include responsive(900px) {
       height: 100vh;
       .container {
         
@@ -1333,7 +1229,7 @@ main {
         
       }
     }
-    @include responsive(414px) {
+    @include responsive(500px) {
       visibility: visible;
       transform: translateX(0%);
       position: initial;
@@ -1579,12 +1475,12 @@ margin-bottom: 2rem;
           color: $brand-blue-light;
           margin-bottom: 2rem;
           font-size: 1.5rem;
-          text-transform: uppercase;
+          
         }
       }
     }
    
-    @include responsive(820px) {
+    @include responsive(900px) {
       width: 100%;
       height: 100%;
       .container {
@@ -1663,7 +1559,7 @@ margin-bottom: 2rem;
         }
       }
     }
-    @include responsive(414px) {
+    @include responsive(500px) {
       visibility: visible;
       transform: translateX(0%);
       position: initial;
@@ -1690,9 +1586,11 @@ margin-bottom: 2rem;
           max-width: 80%;
           height: 30rem;
           margin-bottom: 2rem;
+         
           .box-img-sobre {
             img {
-         
+         width: 70%;
+         margin: 0 auto;
               &:hover {
                 transform: translateX(0rem);
                 transform: scale(0.9);
@@ -1716,7 +1614,8 @@ margin-bottom: 2rem;
           p {
             margin-bottom: 3rem;
             font-size: 1.2rem;
-            line-height: 2rem;
+            line-height: 1.9rem;
+           
           }
         }
       }
@@ -1897,7 +1796,8 @@ margin-bottom: 2rem;
       .social-contaos {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+   gap: 3rem;
         width: 100%;
         max-width: 50%;
         margin-top: 10rem;
@@ -1907,11 +1807,9 @@ margin-bottom: 2rem;
         }
 
         a {
-          opacity: 0.5;
           transition: transform 0.3s ease-in-out;
 
           &:hover {
-            opacity: 1;
             transform: translateY(0.5rem);
           }
         }
@@ -1919,7 +1817,7 @@ margin-bottom: 2rem;
     }
     @include responsive(1200px) {
     }
-    @include responsive(820px) {
+    @include responsive(900px) {
       height: 100vh;
       .container {
         width: 90%;
@@ -2033,18 +1931,18 @@ margin-bottom: 2rem;
           }
   
           a {
-            opacity: 0.5;
+
             transition: transform 0.3s ease-in-out;
   
             &:hover {
-              opacity: 1;
+
               transform: translateY(0.5rem);
             }
           }
         }
       }
     }
-    @include responsive(414px) {
+    @include responsive(500px) {
       visibility: visible;
       transform: translateX(0%);
       position: initial;
@@ -2141,7 +2039,7 @@ margin-bottom: 2rem;
               p {
                 margin: auto 0;
                 font-weight: bold;
-                font-size: 2.2rem;
+                font-size: 2rem;
                 text-transform: uppercase;
                 color: $brand-blue;
               }
@@ -2169,13 +2067,7 @@ margin-bottom: 2rem;
           }
   
           a {
-            opacity: 0.5;
-            transition: transform 0.3s ease-in-out;
-  
-            &:hover {
-              opacity: 1;
-              transform: translateY(0.5rem);
-            }
+
           }
         }
         

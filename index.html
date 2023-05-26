@@ -15,10 +15,41 @@
   <header class="header" data-aos="fade-down" data-aos-duration="1000">
     <div class="container">
       <div class="btn-menu-mobile" onclick="openMenu()">
-        <img class="js-btn-mob" src="./img/openMenuMob.svg" alt="menu" />
+        <img class="js-btn-mobile" src="./img/openMenuMob.svg" alt="menu" />
+      </div>
+      <div class="overlay" onclick="closeMenuMobile()"></div>
+      <div class="menu-mobile">
+        <div class="menu-mobile-content">
+          <ul>
+            <li><a href="#s-portifolio">📋 Projetos</a></li>
+            <li><a href="#s-halidades">🧙 Habilidades</a></li>
+            <li><a href="#s-sobre">👨🏻‍💻 Sobre</a></li>
+            <li><a href="#s-contatos">🚀 Contato</a></li>
+          </ul>
+          <div class="social-box-mobile">
+            <div class="social-mobile">
+              <a href="https://www.linkedin.com/in/windsorsbarbosa/" target="_blank"><img src="./img/linkwh.svg"
+                  alt="" /></a>
+              <a href="#" target="_blank"><img src="./img/dribbblewh.svg" alt="" /></a>
+              <a href="https://github.com/Windsor95" target="_blank"><img src="./img/gitwh.svg" alt="" /></a>
+              <a href="https://www.instagram.com/windsor.greene/" target="_blank"><img src="./img/instagramwh.svg"
+                  alt="" /></a>
+              <a href="https://www.youtube.com/channel/UC1mJSBWHz6Gsdh4jigOb5tA" target="_blank"><img
+                  src="./img/youtubewh.svg" alt="" /></a>
+              <a href="https://www.facebook.com/profile.php?id=100005774989142" target="_blank"><img
+                  src="./img/facewh.svg" alt="" /></a>
+            </div>
+            <p>Bring<br>Me<br>The<br>Horizon</p>
+          </div>
+          <div class="box-img-mobile">
+            <img class="img-mobile" src="./img/foto2.png" alt="">
+          </div>
+          <p class="copyright-mobile">© 2023 - Windsor</p>
+        </div>
       </div>
       <div class="logo-main">
-        <a class="js-back-home" onclick="backHome()" href="#s-hero"><img src="./img/logo-main.svg" alt="logo main" /></a>
+        <a class="js-back-home" onclick="backHome()" href="#s-hero"><img src="./img/logo-main.svg"
+            alt="logo main" /></a>
       </div>
       <nav class="nav-header">
         <ul>
@@ -104,9 +135,9 @@
           <img class="img-x" src="./img/design-xxxx.svg" alt="" />
           MEUS PROJETOS</h2>
         <div class="container-projetos">
-          <div class="hover-efeito" data-aos="zoom-in">
+          <div class="hover-efeito">
             <!-- BOX INICIO -->
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-right" data-aos-delay="100">
               <img class="img-projeto" src="./img/projeto01.png" alt="">
               <img class="logo-projeto" src="./img/logo-main.svg" alt="">
               <div class="box-linguagens">
@@ -115,9 +146,10 @@
                 <img src="./img/SASS.png" alt="">
                 <img src="./img/JAVASCCRIPT.png" alt="">
               </div>
-              <button class="btn-primary"><a href="https://github.com/Windsor95/Meu-Portf-lio" target="_blank">Saiba mais</a></button>
+              <button class="btn-primary"><a href="https://github.com/Windsor95/Meu-Portf-lio" target="_blank">Saiba
+                  mais</a></button>
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-left" data-aos-delay="200">
               <img class="img-projeto" src="./img/projeto02.png" alt="">
               <img class="logo-projeto" src="./img/sakurafood.svg" alt="">
               <div class="box-linguagens">
@@ -126,9 +158,10 @@
                 <img src="./img/SASS.png" alt="">
                 <img src="./img/JAVASCCRIPT.png" alt="">
               </div>
-              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto---Sakura-Food" target="_blank">Saiba mais</a></button>
+              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto---Sakura-Food"
+                  target="_blank">Saiba mais</a></button>
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-right" data-aos-delay="300">
               <img class="img-projeto" src="./img/projeto03.png" alt="">
               <img class="logo-projeto" src="./img/logo-p03.svg" alt="">
               <div class="box-linguagens">
@@ -137,9 +170,10 @@
                 <img src="./img/SASS.png" alt="">
                 <img src="./img/JAVASCCRIPT.png" alt="">
               </div>
-              <button class="btn-primary"><a href="https://github.com/Windsor95/Landing-Page-Neon-Card" target="_blank">Saiba mais</a></button>
+              <button class="btn-primary"><a href="https://github.com/Windsor95/Landing-Page-Neon-Card"
+                  target="_blank">Saiba mais</a></button>
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-left" data-aos-delay="400">
               <img class="img-projeto" src="./img/projeto04.png" alt="">
               <img class="logo-projeto" src="./img/logo-p04.svg" alt="">
               <div class="box-linguagens">
@@ -148,9 +182,10 @@
                 <img src="./img/SASS.png" alt="">
                 <img src="./img/JAVASCCRIPT.png" alt="">
               </div>
-              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto-Fortnite-Battle-Royale" target="_blank">Saiba mais</a></button>
+              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto-Fortnite-Battle-Royale"
+                  target="_blank">Saiba mais</a></button>
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-right" data-aos-delay="500">
               <img class="img-projeto" src="./img/projeto05.png" alt="">
               <img class="logo-projeto" src="./img/logo-p05.svg" alt="">
               <div class="box-linguagens">
@@ -159,21 +194,22 @@
                 <img src="./img/SASS.png" alt="">
                 <img src="./img/JAVASCCRIPT.png" alt="">
               </div>
-              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto-Pok-dex" target="_blank">Saiba mais</a></button>
+              <button class="btn-primary"><a href="https://github.com/Windsor95/Projeto-Pok-dex" target="_blank">Saiba
+                  mais</a></button>
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-left" data-aos-delay="600">
               <img class="img-projeto" src="./img/projetoload.png" alt="">
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-right" data-aos-delay="700">
               <img class="img-projeto" src="./img/projetoload.png" alt="">
             </div>
-            <div class="box-projeto first">
+            <div class="box-projeto first" data-aos="fade-left" data-aos-delay="800">
               <img class="img-projeto" src="./img/projetoload.png" alt="">
             </div>
-            
-           
 
-            
+
+
+
 
             <!-- BOX FIM -->
           </div>
@@ -189,7 +225,7 @@
 
         <h2>Habilidades</h2>
         <div class="container-habilidades">
-          <div class="box-habilidades">
+          <div class="box-habilidades" data-aos="fade-up" data-aos-delay="100">
             <div class="box-conteudos">
               <h3>DESENVOLVEDOR</h3>
               <p>Utilizo as mais diversas tecnologias, capaz de criar sites e aplicações web completas e funcionais,
@@ -204,10 +240,12 @@
               </div>
             </div>
             <div class="box-img">
-              <img src="./img/desenvolvedor-img.png" alt="">
+              <video autoplay width="399px" loop muted>
+                <source src="./video/dev.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
-          <div class="box-habilidades">
+          <div class="box-habilidades" data-aos="fade-up" data-aos-delay="200">
             <div class="box-conteudos">
               <h3>UX/UI DESIGNER </h3>
               <p>Como Designer, crio layouts modernos e completos utilizando tecnologias variadas e me mantenho
@@ -222,10 +260,12 @@
               </div>
             </div>
             <div class="box-img">
-              <img src="./img/ux-design-img.png" alt="">
+              <video autoplay width="399px" loop muted>
+                <source src="./video/ux.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
-          <div class="box-habilidades">
+          <div class="box-habilidades" data-aos="fade-up" data-aos-delay="300">
             <div class="box-conteudos">
               <h3>ILUSTRADOR</h3>
               <p>Como Ilustrador, utilizo tecnologias diversas para criar ilustrações com alta qualidade e eficiência.
@@ -240,7 +280,9 @@
               </div>
             </div>
             <div class="box-img">
-              <img src="./img/ilustraçao-img.png" alt="">
+              <video autoplay width="399px" loop muted>
+                <source src="./video/illustra.mp4" type="video/mp4">
+              </video>
             </div>
           </div>
         </div>
@@ -253,23 +295,23 @@
         <!--<img class="img-x2" src="./img/design-xxxx.svg" alt="" />-->
         <img class="img-pontos2" src="./img/design-pontos.svg" alt="" />
 
-        <div class="box-sobre-left" >
+        <div class="box-sobre-left">
           <div class="box-img-sobre">
             <img src="./img/foto.png" alt="">
           </div>
         </div>
-        <div class="box-sobre-right" >
+        <div class="box-sobre-right">
           <img class="img-x" src="./img/design-xxxx.svg" alt="" />
           <h2>windsor barbosa</h2>
           <p>
-            Desde o início da minha carreira, trabalhei com diversas tecnologias,
-            como HTML, CSS, JavaScript, React, Vue e muitas outras. Acredito que a
+            Desde o início dos meus estudos, trabalhei com diversas tecnologias,
+            como HTML, CSS, JavaScript, React js, Node js e muitas outras. Acredito que a
             combinação certa de tecnologia e design pode criar soluções digitais únicas
             e impactantes. Trabalho com a missão de fornecer aos meus clientes soluções
             personalizadas que atendam às suas necessidades específicas. Minha abordagem
             é colaborativa e baseada em resultados, trabalhando em estreita colaboração
             com os clientes para entender seus objetivos e criar soluções eficazes.
-            Estou sempre buscando aprender e crescer como desenvolvedor(a) para fornecer
+            Estou sempre buscando aprender e crescer como desenvolvedor para fornecer
             o melhor serviço possível aos meus clientes.
           </p>
           <img class="img-x-2" src="./img/design-xxxx.svg" alt="" />
@@ -334,7 +376,6 @@
       once: true,
       disabled: 'mobile',
     });
-
   </script>
 
 </body>

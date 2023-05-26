@@ -12,6 +12,13 @@ $brand-gradient-light: linear-gradient(
   #eeeeee 104.8%
 );
 
+$brand-gradient-blue: linear-gradient(
+  140deg,
+  rgba(145, 216, 247, 1) 0%,
+  rgba(22, 146, 197, 1) 48%,
+  rgba(5, 107, 149, 1) 100%
+);
+
 //gray
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;

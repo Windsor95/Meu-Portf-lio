@@ -22,6 +22,10 @@ Meu Portfólio - HTML,CSS, JS
   <img alt="Landing Page Neon Card" src="./github/portpreview.png" width="100%">
 </p>
 
+## 🌐 Deploy
+
+https://meu-portfolio-beta-two.vercel.app/
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:

@@ -67,17 +67,47 @@ function darkMode() {
   document.querySelector('.s-contatos h2').style.color = '#ffffff';
 }
 
+const overlay = document.querySelector('.overlay');
+const menuMobile = document.querySelector('.menu-mobile');
 function openMenu() {
-  const changeBtn = document.querySelector('.js-btn-mob');
-  if (
-    changeBtn.src === './img/openMenuMob.svg' ||
-    changeBtn.src === 'http://127.0.0.1:5501/img/openMenuMob.svg'
-  ) {
-    changeBtn.setAttribute('src', './img/closeMenuMob.svg');
+
+  if(menuMobile.classList.contains('active')) {
+    menuMobile.classList.remove('active');
+    overlay.classList.remove('active');
   } else {
-    changeBtn.setAttribute('src', './img/openMenuMob.svg');
+    menuMobile.classList.add('active');
+    overlay.classList.add('active');
   }
+  
 }
+
+function closeMenuMobile() {
+  menuMobile.classList.remove('active');
+  overlay.classList.remove('active');
+ 
+}
+
+
+const scrollLink = document.querySelectorAll(".menu-mobile-content ul li a");
+
+function sectLink(event) {
+  event.preventDefault();
+
+  const href = event.currentTarget.getAttribute("href");
+  const sec = document.querySelector(href);
+  const initSEC = sec.offsetTop;
+
+  window.scrollTo({
+    top: initSEC - 100,
+    behavior: "smooth",
+  });
+}
+
+scrollLink.forEach((link) => {
+  link.addEventListener("click", sectLink);
+});
+
+
 
 function designColorInitial() {
   document.querySelector('.design-portfolio-blue').classList.add('active');
